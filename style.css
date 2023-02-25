@@ -3,6 +3,10 @@ body {
     height: 100%;
 }
 
+* {
+    font-size: 30px;
+}
+
 .container {
     display: flex;
 }
@@ -14,7 +18,11 @@ body {
 
 .grid {
     display: grid;
-    gap: 20px;
+    gap: 5px;
+}
+
+.buttonZone {
+    justify-content: space-between;
 }
 
 .gridNumbers {
@@ -23,13 +31,30 @@ body {
 
 .gridOperators {
     grid-template-columns: auto auto;
+    grid-template-rows: min-content min-content;
 }
 
 .calculator {
     flex-direction: column;
+    background-color: darkslateblue;
+    padding: 40px;
+    border-radius: 25px;
 }
 
-.calculator,
-.buttonZone {
-    gap: 100px;
+.display {
+    padding: 20px;
+    width: 600px;
+    text-align: end;
+    background-color: white;
+    margin-bottom: 60px;
+}
+
+button {
+    width: 100px;
+    height: 100px;
+}
+
+button,
+.display {
+    border-radius: 5px;
 }
