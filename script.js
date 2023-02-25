@@ -1,5 +1,6 @@
 let display = [];
 let displayString = "";
+let outputValue = 0;
 
 function add (a, b) {
     a = parseInt(a);
@@ -92,7 +93,8 @@ const allButtons = document.querySelectorAll("button");
 for (const button of allButtons) {
     button.addEventListener("click", () => {
         if (button.classList.contains("compute")) {
-            outputDisplay.innerHTML = computeOutput(display);
+            outputValue = computeOutput(display);
+            outputDisplay.innerHTML = outputValue;
             display.length = 0;
             displayString = "";
             return;
