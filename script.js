@@ -76,7 +76,10 @@ const allButtons = document.querySelectorAll("button");
 for (const button of allButtons) {
     button.addEventListener("click", () => {
         if (button.classList.contains("compute")) {
-            console.log(computeOutput(display));
+            outputDisplay.innerHTML = computeOutput(display);
+            display.length = 0;
+            displayString = "";
+            return;
         } else if (button.classList.contains("delete")) {
             
         }
