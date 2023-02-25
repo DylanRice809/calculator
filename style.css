@@ -1,0 +1,34 @@
+html,
+body {
+    height: 100%;
+}
+
+.container {
+    display: flex;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.gridNumbers {
+    grid-template-columns: auto auto auto;
+}
+
+.gridOperators {
+    grid-template-columns: auto auto;
+}
+
+.calculator {
+    flex-direction: column;
+}
+
+.calculator,
+.buttonZone {
+    gap: 20px;
+}
