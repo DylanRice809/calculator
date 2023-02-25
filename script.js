@@ -70,6 +70,22 @@ function computeOutput (input) {
     return output;
 }
 
+function deleteContent () {
+    display.length = 0;
+    displayString = "";
+    outputDisplay.innerHTML = 0;
+}
+
+function removeLast () {
+    display.pop();
+    displayString = displayString.substring(0, displayString.length - 1);
+    if (displayString == "") {
+        outputDisplay.innerHTML = "0";
+    } else {
+        outputDisplay.innerHTML = displayString;
+    }
+}
+
 const outputDisplay = document.querySelector(".display");
 
 const allButtons = document.querySelectorAll("button");
@@ -81,7 +97,14 @@ for (const button of allButtons) {
             displayString = "";
             return;
         } else if (button.classList.contains("delete")) {
-            
+            deleteContent();
+            return;
+        } else if (button.classList.contains("deleteOne")) {
+            removeLast();
+            return;
+        }
+        if (displayString.length >= 30) {
+            return;
         }
         display.push(button.innerHTML);
         displayString += button.innerHTML;
